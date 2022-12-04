@@ -1,0 +1,192 @@
+:root {
+  --font-color: rgba(0, 0, 0, 0.6);
+  --bg-color: #e5e5e5;
+  --main-bg1-color: #fbfbfb;
+  --main-bg2-color: #6a1cc3;
+  --main-edge-color: #8849cf;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  background-color: var(--bg-color);
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+main,
+.site-header {
+  max-width: 391px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main {
+  background-color: var(--main-bg1-color);
+  padding: 2rem;
+}
+
+.site-header {
+  background-color: #6a1cc3;
+  color: #fbfbfb;
+  height: 95px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 30px 20px 30px;
+  gap: 0.75rem;
+}
+
+.header-bottom {
+  max-width: 391px;
+  height: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--main-bg1-color);
+}
+
+.svg-arrow polygon {
+  fill: var(--main-bg2-color);
+}
+
+h1 {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+.menue-icon {
+  height: 2rem;
+  width: 2rem;
+  flex-shrink: 0;
+}
+
+.main-header {
+  margin-bottom: 20px;
+}
+
+.yourfellowstudents {
+  font-size: 1.2rem;
+}
+
+.search-wrapper {
+  border: 2px solid var(--main-bg2-color);
+  position: relative;
+  font-size: 16px;
+  padding: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.search-input-field {
+  border: none;
+  width: 100%;
+  line-height: 1;
+}
+
+::placeholder {
+  color: rgba(75, 20, 138, 0.38);
+  opacity: 1;
+}
+
+h2 {
+  color: var(--main-bg2-color);
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-top: 0;
+}
+
+p {
+  color: var(--font-color);
+}
+
+select {
+  color: #6a1cc3;
+  border-color: #6a1cc3;
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
+}
+
+.full_time {
+  margin: 0;
+  padding-top: 45px;
+  font-size: 1.2rem;
+}
+
+.selectdiv,
+.timediv {
+  display: inline;
+  display: flex;
+  justify-content: flex-start;
+  gap: 13px;
+}
+
+.icon-wrapper {
+  background-color: #6a1cc3;
+  color: #fbfbfb;
+  width: 39px;
+  height: 39px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.studentbox-wrapper {
+  border: 2px solid var(--main-bg2-color);
+  box-shadow: 12px 12px 2px 1px var(--main-bg2-color);
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 1rem;
+  margin: 1rem 0;
+}
+
+/*.student-name {
+  padding-left: 20px;
+}*/
+
+.studentbox-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 2.5fr 0.8fr;
+  grid-template-rows: 2fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "icon-wrapper student-name student-name";
+}
+
+.icon-wrapper {
+  grid-area: icon-wrapper;
+}
+
+.student-name {
+  display: grid;
+  grid-template-columns: 1fr;
+  /*grid-template-rows: 1fr 1fr;*/
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "."
+    "githubcom";
+  grid-area: student-name;
+}
+
+/*.githubcom {
+  grid-area: githubcom;
+}*/
+
+[href] {
+  font-size: smaller;
+}
