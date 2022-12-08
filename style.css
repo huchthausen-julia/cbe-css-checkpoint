@@ -5,11 +5,6 @@
   --main-bg2-color: #6a1cc3;
   --main-edge-color: #8849cf;
 }
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
 
 body {
   font-family: "Montserrat", sans-serif;
